@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thư Gửi Vy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f7f7f7;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #dedddd;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 30px 20px 10px;
+      position: relative;
+      display: none; /* Ẩn mặc định */
+    }
+    .wave {
+      font-size: 28px;
+    }
+    h1 {
+      margin: 10px 0;
+      color: #d46c6c;
+      font-size: 26px;
+    }
+    p {
+      font-size: 20px;
+      color: #333;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      text-align: left;
+      font-family: 'Dancing Script', cursive;
+    }
+    .btn {
+      background: #d67f7f;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .note-box {
+      background: #f4511e;
+      color: white;
+      padding: 10px;
+      margin-top: 25px;
+      font-size: 16px;
+      border-radius: 4px 4px 0 0;
+      font-weight: bold;
+    }
+    .date-box {
+      background: white;
+      padding: 10px;
+      font-size: 14px;
+      color: #333;
+      border-radius: 0 0 4px 4px;
+    }
+    .image {
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+      margin-top: 20px;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="content">
+    <div class="wave">👋</div>
+    <h1>Người nhận: Vy,</h1>
+    <p>
+        Gửi Vy, cô bé đáng yêu,
+
+        Trước tiên, anh muốn cảm ơn em vì thời gian qua đã tiếp thêm cho anh rất nhiều động lực bằng những lá thư tay siêu dễ thương mà anh luôn trân quý. ✨
+        
+        Đây mặc dù không phải là lá thư tay nên có thể không được trịnh trọng cho lắm và có thể hơi khô khan một chút nên mong em đừng chê nha 😼 Nhưng anh vẫn muốn gửi đến em bằng tất cả sự chân thành của mình.
+        
+        Dạo gần đây anh vẫn luôn xoay vòng với công việc và những lịch trình bận rộn, lúc nào cũng cà phê, dậy sớm, ngủ trễ. Đôi khi anh biết mình đã không dành đủ thời gian cho em, để em phải chờ đợi những tin nhắn phản hồi, rồi buồn và lo lắng khi anh "bốc hơi" mất tiêu… Anh áy náy lắm. 🥺
+        
+        Thế nhưng chính trong những lúc như vậy, mỗi lần đọc được thư của Vy lại khiến anh như được tiếp thêm năng lượng. Như một món quà bất ngờ giữa ngày, em làm anh thấy nhẹ lòng hơn rất nhiều. Tim đang mệt cũng bỗng sáng đèn lên cái “tách” – vì được sạc pin bằng tín hiệu yêu thương từ trái tim ai đó. ⚡️
+
+        Riêng cái đoạn "ông bụt", anh phải dừng gõ mấy giây vì bật cười luôn… Em ví dụ gì mà vừa đáng yêu vừa “trúng tim đen” quá vậy. Nhưng bụt thì cũng biết mệt đó nha, nên Vy mà không ngoan là bụt… xin nghỉ phép luôn 😤 (nói vậy thôi chứ thương không hết thì nghỉ làm sao nổi, đúng hong )
+        
+        Câu hát em gửi làm anh muốn tua lại hết những khoảnh khắc có Vy ghé qua trong đời mình. Tự dưng thấy cuộc sống có màu hơn, như thể từ trắng đen chuyển thành pastel, mà màu nào cũng ánh lên nụ cười của em 🌈
+        
+        Khi rảnh rỗi hơn, anh hứa sẽ sắp xếp để dành nhiều thời gian hơn cho em. Và anh cũng đang cố gắng tiết kiệm lại, để có thể cùng em Vy ham chơi – ham khám phá này trải nghiệm thêm thật nhiều điều mới mẻ nữa 👀
+        
+        Cuối cùng, anh không biết phải nói bao nhiêu lần "cảm ơn" thì mới đủ, nhưng...
+        Cảm ơn em, vì đã tin tưởng ở anh, và chọn anh là người được đi cùng.
+    </p>
+    <button onclick="window.location.href='nhacthongminh-main/index.html'" class="btn">Món quà tinh thần bé xíu (nhấn vào nha) </button>
+    <div class="note-box">Bức thư số 1</div>
+    <div class="date-box">11 Tháng 5 2025</div>
+    <img src="2131_wedding_lite/images/vongtay.png" alt="Couple" class="image" />
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const now = new Date();
+      const hour = now.getHours();
+
+      const isAllowed = (hour >= 2 || hour < 20);
+      const container = document.getElementById("content");
+
+      if (isAllowed) {
+        container.style.display = "block";
+      } else {
+        alert("Trang này chỉ có thể được mở từ 22h đến 2h sáng. Hẹn gặp lại Vy sau giờ đó nha 😴");
+        document.body.innerHTML = ""; // Xóa toàn bộ nội dung
+      }
+    });
+  </script>
+</body>
+</html>
