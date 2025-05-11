@@ -2,10 +2,50 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="0; url=2131_wedding_lite/index.html">
-  <title>Đang chuyển hướng...</title>
+  <title>Chuyển hướng có điều kiện</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #countdown {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #d63031;
+    }
+  </style>
 </head>
 <body>
-  <p>Nếu không được chuyển hướng tự động, <a href="2131_wedding_lite/index.html">bấm vào đây</a>.</p>
+  <h1>Trang sẽ được mở sau 22h ngày 12/05/2025</h1>
+  <p id="message">Vui lòng chờ đến thời gian cho phép...</p>
+  <div id="countdown"></div>
+
+  <script>
+    const redirectUrl = "2131_wedding_lite/index.html";
+    const targetTime = new Date("2025-05-12T22:00:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeDiff = targetTime - now;
+
+      if (timeDiff <= 0) {
+        document.getElementById("message").innerText = "Chuyển hướng...";
+        window.location.href = redirectUrl;
+        return;
+      }
+
+      const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerText =
+        `Còn lại: ${hours} giờ ${minutes} phút ${seconds} giây`;
+
+      setTimeout(updateCountdown, 1000);
+    }
+
+    updateCountdown();
+  </script>
 </body>
 </html>
