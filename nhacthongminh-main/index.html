@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gửi Vy – Bản Nhạc Nhỏ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2216%22>😛</text></svg>">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gửi Vy – Bản Nhạc Nhỏ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22><text y=%2214%22 font-size=%2216%22>😛</text></svg>">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="music-player">
-        <h1 class="title">Một bản nhạc nhỏ dành cho Vy</h1>
-        <p class="note">Hy vọng bản nhạc này sẽ làm em thư giãn hơn 🌸</p>
+  <div class="music-player">
+    <h1 class="title">Một bản nhạc nhỏ dành cho Vy</h1>
+    <p class="note">Hy vọng bản nhạc này sẽ làm em thư giãn hơn 🌸</p>
 
-        <audio id="audio" controls>
-            <source src="music.mp3" type="audio/mpeg">
-            Trình duyệt của bạn không hỗ trợ phát nhạc.
-        </audio>
+    <audio id="audio" controls>
+      <source src="nhacthongminh_thang5.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
 
-        <button id="play-button">Phát</button>
-        <button onclick="window.location.href='../2131_wedding_lite/index.html'" class="back-button">← Trở về</button>
+    <div class="button-group">
+      <button id="play-button">Phát</button>
+      <button onclick="window.location.href='../2131_wedding_lite/index.html'" class="back-button">← Trở về</button>
     </div>
 
-    <script src="script.js"></script>
+    <div class="instructions">
+      <p><strong>Hướng dẫn sử dụng:</strong></p>
+      <ul>
+        <li>💤 Chúc tui ngủ ngon</li>
+        <li>🔊 Vặn âm lên một chút nhé</li>
+        <li>📴 Tắt màn hình điện thoại đi</li>
+        <li>🎵 Nghe nhạc và thư giãn</li>
+        <li>🛏️ Đi ngủ đi nào</li>
+        <li>🌙 Ngủ thật ngon nhé</li>
+        <li>💤 Nhạc tự tắt sau khi hết nhạc nên cứ tắt điện thoại vẫn nghe được nha</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

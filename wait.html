@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chuyển hướng có điều kiện</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+      background-color: #fefefe;
+    }
+    #countdown {
+      font-size: 24px;
+      margin-top: 20px;
+      color: #d63031;
+    }
+    #fb-message {
+      display: none;
+      margin-top: 30px;
+    }
+    #fb-message p {
+      font-size: 18px;
+      color: #2d3436;
+    }
+    #fb-message a {
+      display: inline-block;
+      background-color: #1877f2;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    #fb-message a:hover {
+      background-color: #0b5cd6;
+    }
+  </style>
+</head>
+<body>
+  <h1>Trang sẽ được mở sau 23h15 ngày 12/05/2025</h1>
+  <p id="message">Vui lòng chờ đến thời gian cho phép...</p>
+  <div id="countdown"></div>
+
+  <div id="fb-message">
+    <p>⏰ Chưa đến thời gian! Vào Messenger nhắn tin với anh nhé 😅</p>
+    <a href="https://www.facebook.com/messages/e2ee/t/phuc.luonghoang02/" target="_blank">Nhắn cho anh</a>
+  </div>
+
+  <script>
+    const redirectUrl = "nhacthongminh-main/index.html";
+    const targetTime = new Date("2025-05-12T23:15:00");
+
+    function updateCountdown() {
+      const now = new Date();
+      const timeDiff = targetTime - now;
+
+      if (timeDiff <= 0) {
+        document.getElementById("message").innerText = "Chuyển hướng...";
+        window.location.href = redirectUrl;
+        return;
+      }
+
+      const hours = Math.floor(timeDiff / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerText =
+        `Còn lại: ${hours} giờ ${minutes} phút ${seconds} giây`;
+
+      setTimeout(updateCountdown, 1000);
+    }
+
+    // Sau 3 giây, hiện thông báo và nút Facebook nếu chưa tới giờ
+    setTimeout(() => {
+      const now = new Date();
+      if (now < targetTime) {
+        document.getElementById("fb-message").style.display = "block";
+      }
+    }, 3000);
+
+    updateCountdown();
+  </script>
+</body>
+</html>
